@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bigBox {
+        width: 300px;
+        height: 300px;
+        background-color: aqua;
+        margin: auto;
+
+    }
+</style>
+
+<body>
+    <div class="bigBox" onclick="disappear()">
+        <h1 id="text">I disapper</h1>
+    </div>
+    <!--second box-->
+    <div class="bigBox">
+        <h1 id="text2">I disappear in seonds</h1>
+    </div>
+</body>
+<script>
+    //disapper when click
+    function disappear() {
+        document.getElementById("text").remove();
+    }
+    // disappear when reach 5 seconds
+    setInterval(function () {
+        document.getElementById("text2").remove();
+    }, 5000);
+
+
+
+</script>
+
+</html>
